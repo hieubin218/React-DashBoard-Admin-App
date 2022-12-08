@@ -1,0 +1,40 @@
+import React from 'react'
+
+// Syncfusion Properties
+import {GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu,
+        Filter, Page, ExcelExport, PdfExport, Edit, Inject} from '@syncfusion/ej2-react-grids';
+
+// Data
+import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy';
+
+// Header Component
+import { Header } from '../components';
+
+
+const Orders = () => {
+    return (
+        <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl'>
+            <Header category="Page" title="Orders" />
+
+            <GridComponent
+                id="gridcomp"
+                dataSource={ordersData}
+                allowPaging
+                allowSorting
+            >
+                <ColumnsDirective>
+                    {ordersGrid.map((item, index) => (
+                        <ColumnDirective key={index} {...item} />
+                    ))}
+                </ColumnsDirective> 
+                <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]} />
+            </GridComponent>
+        </div>
+    )
+} 
+
+export default Orders
+
+
+// <GridComponent></GridComponent>: Where simply the data goes
+// allowPaging property and <Inject services={[]} /> which make the page can be by page 1, 2, 3,...

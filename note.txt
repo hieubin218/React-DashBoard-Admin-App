@@ -1,0 +1,41 @@
+NOTES TAKEN WHILE STUDYING
+
+1. useEffect
+2. BrowserRouter/Routes/Route - react-router-dom
+3. zIndex Style
+4. TooltipComponent:
+    - props: content, position
+
+
+5. React-icons:
+    - import { IconName } from "react-icons/fi";
+    - Ex: IconName is:  FiSettings, FiAirplay, FiActivitity,....
+        <FiSettings />
+    * (https://react-icons.github.io/react-icons)
+
+
+4. TooltipComponent in Syncfusion:
+    - import {TooltipComponent} from '@Syncfusion/ej2-react-popups';
+    <TooltipComponent content="" position="" style="">
+        ... content here
+        ex: <button></button>
+    </TooltipComponent>
+
+    - TooltipComponent displays a pop-up containing an information or message when 
+        hover, click, focus, or touch an element.
+
+    - the pop-up could include: simple text, images, hyperlinks, or custom templates.
+    - By mobile devices, to display TooltipComponent, tap and hole the target elements
+
+5. <Route path="/" element="" />
+
+
+6. REACT: createText, useContext, useState
+    - Context provides a way to pass data through the component tree 
+        without having to pass props down manually at every level.
+    - In general, data is passed top-down (parent to child) via props
+
+
+7. Window InnerWidth and OutnerWidth:
+
+8. CSS: hover:drop-shadow-xl
